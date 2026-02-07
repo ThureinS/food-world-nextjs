@@ -1,23 +1,50 @@
 import Link from "next/link";
 
+import styles from "./page.module.css";
+
 export default function Home() {
   return (
-    <main>
-      <h1 style={{ color: "white", textAlign: "center" }}>
-        Time to get started!
-      </h1>
-      <div>
-        <Link href="/community">Community</Link>
-      </div>
-      <div>
-        <Link href="/meals">Meals</Link>
-      </div>
-      <div>
-        <Link href="/meals/share">Share Meals</Link>
-      </div>
-      <div>
-        <Link href="/meals/share">Share Meals</Link>
-      </div>
-    </main>
+    <>
+      <header className={styles.header}>
+        <div className={styles.slideshow}></div>
+        <div>
+          <div className={styles.hero}>
+            <h1>Food World for foodies around the world</h1>
+            <p>Taste & share your favorite food.</p>
+          </div>
+          <div className={styles.cta}>
+            <Link href="/community">Join the Community</Link>
+            <Link href="/meals">Explore Meals</Link>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section className={styles.section}>
+          <h2>How it works</h2>
+          <p>
+            Food World is a platform for foodies to share their favorite recipes
+            with the world. It&apos;s a place to discover new dishes, and to
+            connect with other food lovers.
+          </p>
+          <p>
+            Food World is a place to discover new dishes, and to connect with
+            other food lovers.
+          </p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Why Food World?</h2>
+          <p>
+            Food World is a platform for foodies to share their favorite recipes
+            with the world. It&apos;s a place to discover new dishes, and to
+            connect with other food lovers.
+          </p>
+          <p>
+            Food World is a place to discover new dishes, and to connect with
+            other food lovers.
+          </p>
+        </section>
+      </main>
+    </>
   );
 }
